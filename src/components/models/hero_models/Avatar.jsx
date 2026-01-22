@@ -7,7 +7,7 @@ import {
   useAnimations,
   Environment,
 } from "@react-three/drei";
-import { useRef, useEffect, Suspense, useState } from "react";
+import { useRef, useEffect, Suspense, useState, useLayoutEffect } from "react";
 import * as THREE from "three";
 
 function useDeviceCapabilities() {
@@ -48,7 +48,7 @@ function AutoCenteredModel() {
   const { scene, animations } = useGLTF("/models/shaishab.glb");
   const { actions } = useAnimations(animations, group);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (scene && group.current) {
       const box = new THREE.Box3().setFromObject(scene);
       const center = box.getCenter(new THREE.Vector3());
