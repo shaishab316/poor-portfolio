@@ -25,8 +25,12 @@ const NavBar = () => {
   return (
     <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
       <div className="inner">
-        <a href="#hero" className="logo">
-          Adrian JSM
+        <a
+          href="https://www.google.com/search?q=@shaishab316"
+          target="_blank"
+          className="logo"
+        >
+          shaishab316
         </a>
 
         <nav className="desktop">
@@ -50,6 +54,6 @@ const NavBar = () => {
       </div>
     </header>
   );
-}
+};
 
 export default NavBar;
